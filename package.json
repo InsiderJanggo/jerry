@@ -1,0 +1,17 @@
+{
+  "name": "jerry-bot",
+  "version": "1.0.0",
+  "description": "Jerry Discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon ."
+  },
+  "author": "Wisly Ong",
+  "license": "MIT",
+  "dependencies": {
+    "ascii-table": "0.0.9",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security"
+  }
+}
