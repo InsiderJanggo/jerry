@@ -4,6 +4,8 @@ require("dotenv").config();
 const jerry = new Client();
 const {TOKEN, VERSION, PREFIX} = process.env;
 
+const website = require("./website/app");
+
 jerry.commands = new Collection();
 jerry.aliases = new Collection();
 jerry.categories = fs.readdirSync("./commands/");
@@ -13,7 +15,12 @@ jerry.categories = fs.readdirSync("./commands/");
 
 jerry.once("ready", () => {
     require("./events/ready")(jerry);
+    website.run(jerry);
 });
+
+jerry.once("guildCreate", (guild) => {
+    jerry.user.setUsername("Jerry");
+})
 
 jerry.on("message", (message) => {
     let prefix = PREFIX;
@@ -66,3 +73,5 @@ jerry.on("message", (message) => {
 });
 
 jerry.login(TOKEN);
+
+module.exports = jerry;

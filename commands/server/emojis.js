@@ -2,7 +2,7 @@ const {MessageEmbed} = require('discord.js');
 
 module.exports={
     name: 'emojis',
-    category: 'guild',
+    category: 'server',
     description: 'displays every emoji of the guild, where the command is used',
     aliases: ['emojilist','emoji'],
     usage: '',

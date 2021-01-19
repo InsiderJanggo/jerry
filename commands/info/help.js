@@ -18,7 +18,7 @@ module.exports = {
 			let embed = new MessageEmbed()
 				.setAuthor(command.name, jerry.user.displayAvatarURL())
 				.setThumbnail(jerry.user.displayAvatarURL())
-				.setColor(process.env.HEXCODE)
+				.setColor("#964B00")
 				.setFooter(`Prefix: ${process.env.PREFIX}`);
 
 			if (command.description) {
@@ -57,7 +57,7 @@ module.exports = {
 				.setDescription(
 					`[Invite link!](https://discord.com/oauth2/authorize?client_id=${process.env.CLIENT_ID}&scope=bot&permissions=8)`,
 				)
-				.setColor(process.env.COLOR)
+				.setColor("#964B00")
 				.setFooter(`Prefix: ${process.env.PREFIX}`)
 				.setThumbnail(jerry.user.displayAvatarURL());
 
